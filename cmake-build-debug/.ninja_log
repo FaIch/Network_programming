@@ -1,3 +1,6 @@
 # ninja log v5
 2	279	6949885180938602	CMakeFiles/untitled.dir/main.cpp.obj	d0a911b6dffb0a8c
 280	358	6949885181688777	untitled.exe	a69561a73a3f6362
+7	311	6951419903743731	build.ninja	9cdb213c32d0f7b0
+1	776	6951419912591514	CMakeFiles/untitled.dir/oving_1/main.cpp.obj	52d55a09827838cc
+776	951	6951419914338966	untitled.exe	81f5c892b06b04db
