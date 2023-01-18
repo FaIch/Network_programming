@@ -22,12 +22,14 @@ bool isPrime(int number){
     return is_prime;
 }
 
-void primesBetweenNumbers(int lower, int higher, list<int> &primes){
+list<int> primesBetweenNumbers(int lower, int higher){
+    list <int> primes;
     for (int i = lower; i < higher; ++i) {
         if (isPrime(i)){
             primes.emplace_back(i);
         }
     }
+    return primes;
 }
 
 vector<pair<int, int>> createSubRanges(const int lower, const int higher, const int numberOfThreads){
@@ -53,15 +55,16 @@ vector<pair<int, int>> createSubRanges(const int lower, const int higher, const 
 
 int main() {
     list<int> primes;
-    int lower = 10;
-    int higher = 1000;
+    int lower = 0;
+    int higher = 2000;
     int numberOfThreads = 3;
     vector<pair<int, int>> rangeBounds = createSubRanges(lower, higher, numberOfThreads);
     vector<thread> threads;
 
     for (int i = 0; i < numberOfThreads; ++i) {
         threads.emplace_back([i, rangeBounds, &primes]{
-            primesBetweenNumbers(rangeBounds[i].first, rangeBounds[i].second, primes);
+            list<int> primesFound = primesBetweenNumbers(rangeBounds[i].first, rangeBounds[i].second);
+            primes.insert(primes.end(), primesFound.begin(), primesFound.end());
         });
     }
 
@@ -74,6 +77,7 @@ int main() {
     for (auto &i : primes){
         cout << i << endl;
     }
+    cout << primes.size() << endl;
 
     return 0;
 }
