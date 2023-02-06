@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/untitled.dir/oving_1/main.cpp.obj"
   "CMakeFiles/untitled.dir/oving_1/main.cpp.obj.d"
+  "CMakeFiles/untitled.dir/oving_2/Workers.cpp.obj"
+  "CMakeFiles/untitled.dir/oving_2/Workers.cpp.obj.d"
   "libuntitled.dll.a"
   "untitled.exe"
   "untitled.exe.manifest"

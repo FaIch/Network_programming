@@ -152,6 +152,30 @@ oving_1/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/oving_1/main.cpp.s
 .PHONY : oving_1/main.cpp.s
 
+oving_2/Workers.obj: oving_2/Workers.cpp.obj
+.PHONY : oving_2/Workers.obj
+
+# target to build an object file
+oving_2/Workers.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/oving_2/Workers.cpp.obj
+.PHONY : oving_2/Workers.cpp.obj
+
+oving_2/Workers.i: oving_2/Workers.cpp.i
+.PHONY : oving_2/Workers.i
+
+# target to preprocess a source file
+oving_2/Workers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/oving_2/Workers.cpp.i
+.PHONY : oving_2/Workers.cpp.i
+
+oving_2/Workers.s: oving_2/Workers.cpp.s
+.PHONY : oving_2/Workers.s
+
+# target to generate assembly for a file
+oving_2/Workers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/oving_2/Workers.cpp.s
+.PHONY : oving_2/Workers.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -164,6 +188,9 @@ help:
 	@echo ... oving_1/main.obj
 	@echo ... oving_1/main.i
 	@echo ... oving_1/main.s
+	@echo ... oving_2/Workers.obj
+	@echo ... oving_2/Workers.i
+	@echo ... oving_2/Workers.s
 .PHONY : help
 
 

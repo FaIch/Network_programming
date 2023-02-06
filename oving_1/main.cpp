@@ -64,7 +64,7 @@ int main() {
     for (int i = 0; i < numberOfThreads; ++i) {
         threads.emplace_back([i, rangeBounds, &primes]{
             list<int> primesFound = primesBetweenNumbers(rangeBounds[i].first, rangeBounds[i].second);
-            primes.insert(primes.end(), primesFound.begin(), primesFound.end());
+            primes.insert(primes.end(),primesFound.begin(), primesFound.end());
         });
     }
 
