@@ -8,6 +8,8 @@ public class SocketClient {
     public static void main(String[] args) throws IOException {
 
         final int PORT_NR = 1250;
+        final DatagramSocket clientSocket = new DatagramSocket();
+        InetAddress address = InetAddress.getLocalHost();
         Scanner readFromTerminal = new Scanner(System.in);
         System.out.println("Type name of server: ");
         String server = readFromTerminal.nextLine();
