@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webserver client</title>
+</head>
+<body>
+    <div id="input_div">
+    <label for="input_text">Input text here:</label>
+    <input id="input_text" type="text">
+    <button id="submitButton">Submit</button>
+    </div>
+
+    <div id="history"></div>
+
+</body>
+</html>
+
+<script>
+    const userInput = document.getElementById("input_text");
+    const submitButton = document.getElementById("submitButton");
+    const historyDiv = document.getElementById("history");
+    const historyList = document.createElement("ul");
+    historyDiv.appendChild(historyList);
+
+    const ws = new WebSocket("ws://localhost:3027")
+
+    ws.onmessage = (event) => {
+        let message = JSON.parse(event.data);
+        receive(message);
+    }
+
+    const userInputHistory = [];
+
+    submitButton.addEventListener("click", function(){
+      ws.send(JSON.stringify({
+        text: userInput.value
+      }))  
+    })
+
+    function receive(message){
+        const listItem = document.createElement("li");
+        listItem.textContent = message.text;
+        historyList.appendChild(listItem);
+        userInput.value = "";
+    }
+
+</script>
+
+<style>
+    ul{
+        list-style-type: none;
+    }
+</style>
