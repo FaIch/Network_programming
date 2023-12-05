@@ -1,3 +1,0 @@
-C:/Users/joaki/CLionProjects/Network_programming/cmake-build-debug/CMakeFiles/untitled.dir
-C:/Users/joaki/CLionProjects/Network_programming/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/joaki/CLionProjects/Network_programming/cmake-build-debug/CMakeFiles/rebuild_cache.dir
